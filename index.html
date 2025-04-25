@@ -4,36 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Gómez Uriarte - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
-        <div class="container">
-            <img src="assets/profile.png" alt="Kevin Gómez Uriarte" class="profile-pic">
-            <h1>Turning Data & Automation into Smart Solutions</h1>
-            <button onclick="window.open('cv-example.pdf')">Download CV</button>
+        <div class="header-content">
+            <h1 id="name">Kevin Gómez Uriarte</h1>
+            <p id="subtitle">Full Stack Developer | Automation & Data</p>
+            <button onclick="window.open('cv-kevin.pdf')">Download CV</button>
+        </div>
+        <div class="lang-switch">
+            <button onclick="toggleLanguage()">🌐 English / Español</button>
         </div>
     </header>
-    <main>
-        <section class="about">
-            <h2>About Me</h2>
-            <p>I specialize in transforming industrial processes through automation, data analysis, and innovative solutions. Passionate about optimizing systems and delivering value.</p>
-        </section>
-        <section class="skills">
-            <h2>Skills</h2>
-            <div class="skill-bar"><span>Python</span><div class="bar"><div class="fill"></div></div></div>
-            <div class="skill-bar"><span>SQL</span><div class="bar"><div class="fill"></div></div></div>
-            <div class="skill-bar"><span>Automation</span><div class="bar"><div class="fill"></div></div></div>
-            <div class="skill-bar"><span>Angular</span><div class="bar"><div class="fill"></div></div></div>
-        </section>
-    </main>
+
+    <!-- ABOUT ME -->
+    <section class="about">
+        <h2 id="about-title">About Me</h2>
+        <p id="about-text">
+            Passionate Full Stack Developer with over 5 years of experience in building scalable web applications. Proficient in Angular, React, Java, and TypeScript. Adept at collaborating with cross-functional teams to deliver high-quality solutions.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills">
+        <h2 id="skills-title">Skills</h2>
+        <div class="badges" id="skills-badges">
+            <span>Angular</span><span>React</span><span>Java</span><span>TypeScript</span>
+            <span>HTML5 & CSS3</span><span>Node.js</span><span>SQL & NoSQL</span><span>Git & GitHub</span>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="experience">
+        <h2 id="exp-title">Experience</h2>
+        <div>
+            <h3>Senior Full Stack Developer – Tech Solutions Inc.</h3>
+            <p>Jan 2020 – Present</p>
+            <ul>
+                <li>Developed web apps with Angular & Java Spring Boot.</li>
+                <li>Implemented UI components with React & TypeScript.</li>
+            </ul>
+            <h3>Front End Developer – Web Creatives</h3>
+            <p>Jun 2017 – Dec 2019</p>
+            <ul>
+                <li>Built interfaces with React and Redux.</li>
+                <li>Optimized apps for speed and scalability.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="education">
+        <h2 id="edu-title">Education</h2>
+        <p>Bachelor of Science in Computer Science</p>
+        <p>University of Technology, 2013 – 2017</p>
+    </section>
+
+    <!-- PROYECTOS MENU -->
+    <section class="menu-proyectos">
+        <h2 id="projects-title">My Projects</h2>
+        <div class="contenedores">
+            <div class="card" onclick="scrollToSection('web')">
+                <img src="assets/img/desarrollos-web.png" alt="Desarrollos Web">
+                <h3>Desarrollos Web</h3>
+            </div>
+            <div class="card" onclick="scrollToSection('dotnet')">
+                <img src="assets/img/desarrollos-dotnet.png" alt="Desarrollos .NET">
+                <h3>Desarrollos .NET</h3>
+            </div>
+            <div class="card" onclick="scrollToSection('dashboards')">
+                <img src="assets/img/dashboards.png" alt="Dashboards">
+                <h3>Dashboards</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DESARROLLOS WEB -->
+    <section id="web">
+        <h2>Desarrollos Web</h2>
+        <div class="gallery">
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/desarrollos-web1.png" alt="Proyecto 1">
+                <div class="desc">E-commerce con Angular</div>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/desarrollos-web2.png" alt="Proyecto 2">
+                <div class="desc">Landing Page Responsive</div>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/desarrollos-web3.png" alt="Proyecto 3">
+                <div class="desc">Blog en React</div>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/desarrollos-web4.png" alt="Proyecto 4">
+                <div class="desc">Web Corporativa</div>
+            </a>
+        </div>
+    </section>
+    
+
+    <!-- SECCIÓN DESARROLLOS .NET -->
+    <section id="dotnet">
+        <h2>Desarrollos .NET</h2>
+        <div class="gallery">
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/desarrollos-dotnet1.png" alt="Proyecto .NET 1">
+                <div class="desc">Sistema ERP en .NET Core</div>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/desarrollos-dotnet2.png" alt="Proyecto .NET 2">
+                <div class="desc">App de Inventarios</div>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/desarrollos-dotnet3.png" alt="Proyecto .NET 3">
+                <div class="desc">Gestión de Clientes (CRM)</div>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/desarrollos-dotnet4.png" alt="Proyecto .NET 4">
+                <div class="desc">Sistema Contable</div>
+            </a>
+        </div>
+    </section>
+    
+
+    <!-- SECCIÓN DASHBOARDS -->
+    <section id="dashboards">
+        <h2>Dashboards</h2>
+        <div class="gallery">
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/dashboards1.png" alt="Dashboard 1">
+                <div class="desc">Ventas Power BI</div>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/dashboards2.png" alt="Dashboard 2">
+                <div class="desc">Reporte Financiero Looker</div>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/dashboards3.png" alt="Dashboard 3">
+                <div class="desc">Dashboard Logístico</div>
+            </a>
+            <a href="https://www.google.com" target="_blank" class="project">
+                <img src="assets/img/dashboards4.png" alt="Dashboard 4">
+                <div class="desc">KPIs de Producción</div>
+            </a>
+        </div>
+    </section>
+    
+
+    <!-- CONTACTO AL FINAL -->
+    <section class="contact">
+        <h2 id="contact-title">Contact</h2>
+        <p>Email: kevin.gomez.mec@gmail.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/kevin-gomez-uriarte-3a50802a2" target="_blank">Perfil</a></p>
+        <p>GitHub: <a href="https://github.com/KevinMec" target="_blank">Repositorio</a></p>
+    </section>
+
+
+    <!-- FLECHA PARA SUBIR -->
+    <div id="goTop" onclick="scrollToTop()">🔝</div>
+
+    <!-- FOOTER -->
     <footer>
-        <a href="https://www.linkedin.com/in/kevin-gomez-uriarte-3a50802a2" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <p>Let’s work together — kevin.gomez.mec@gmail.com</p>
         <p>© 2025 Kevin Gómez Uriarte</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
