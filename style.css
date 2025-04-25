@@ -90,7 +90,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* CARDS DE PROYECTOS */
+/* CARDS DE MENÚ DE PROYECTOS */
 .contenedores {
     display: flex;
     justify-content: center;
@@ -122,17 +122,29 @@ a:hover {
     transform: scale(1.05);
 }
 
-/* GALERÍA DE PROYECTOS */
+/* GALERÍA DE PROYECTOS CON GRID */
 .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    justify-items: center;
 }
 
+/* FORZAR 2 COLUMNAS EN MÓVIL */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* PROYECTO INDIVIDUAL */
 .project {
     position: relative;
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .project img {
@@ -170,7 +182,14 @@ a:hover {
     cursor: pointer;
     display: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    font-size: 1.5em;
+    font-size: 1.8em;
+    transition: transform 0.3s, background 0.3s;
+    z-index: 999;
+}
+
+#goTop:hover {
+    background: #009acd;
+    transform: scale(1.2);
 }
 
 /* FOOTER */
@@ -183,14 +202,10 @@ footer {
     font-size: 0.9em;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE PARA EL MENÚ DE PROYECTOS */
 @media (max-width: 600px) {
     .contenedores {
         flex-direction: column;
         align-items: center;
-    }
-
-    .gallery {
-        flex-direction: column;
     }
 }
