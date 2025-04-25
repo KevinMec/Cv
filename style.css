@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #000;
+}
+header {
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 2px solid #eee;
+}
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+.profile-pic:hover {
+    filter: grayscale(0%);
+}
+h1 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+button {
+    background: #00BFFF;
+    border: none;
+    padding: 10px 25px;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #009acd;
+}
+main {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+.skills .skill-bar {
+    margin: 15px 0;
+}
+.bar {
+    width: 100%;
+    background: #eee;
+    border-radius: 20px;
+}
+.fill {
+    width: 80%;
+    height: 10px;
+    background: #00BFFF;
+    border-radius: 20px;
+}
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #000;
+    color: #fff;
+}
+footer a {
+    color: #00BFFF;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
