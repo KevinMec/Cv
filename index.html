@@ -1,177 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Gómez Uriarte - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Gómez Uriarte - Analista de Negocios</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <div class="header-content">
+      <h1 id="name">Kevin Gómez Uriarte</h1>
+      <p id="subtitle">Analista de Negocios | Gestión de Cambios | Scrum</p>
+      <button onclick="window.open('cv-kevin.pdf')">Descargar CV</button>
+    </div>
+    <div class="lang-switch">
+      <button onclick="toggleLanguage()">🌐 Español / English</button>
+    </div>
+  </header>
 
-    <!-- HEADER -->
-    <header>
-        <div class="header-content">
-            <h1 id="name">Kevin Gómez Uriarte</h1>
-            <p id="subtitle">Full Stack Developer | Automation & Data</p>
-            <button onclick="window.open('cv-kevin.pdf')">Download CV</button>
-        </div>
-        <div class="lang-switch">
-            <button onclick="toggleLanguage()">🌐 English / Español</button>
-        </div>
-    </header>
+  <section class="about">
+    <h2>Sobre Mí</h2>
+    <p>
+      Analista de negocios con experiencia en recuperación de servicios, manejo de flujos de solicitudes de cambio y control de folios en Coppel.
+      Gran actitud, excelente comunicación y enfoque en resultados. Conocimiento práctico en metodologías ágiles como SCRUM y experiencia en entornos corporativos de alta demanda.
+    </p>
+  </section>
 
-    <!-- ABOUT ME -->
-    <section class="about">
-        <h2 id="about-title">About Me</h2>
-        <p id="about-text">
-            Passionate Full Stack Developer with over 5 years of experience in building scalable web applications. Proficient in Angular, React, Java, and TypeScript. Adept at collaborating with cross-functional teams to deliver high-quality solutions.
-        </p>
-    </section>
+  <section class="skills">
+    <h2>Habilidades</h2>
+    <div class="badges">
+      <span>SCRUM</span><span>Gestión de Cambios</span><span>Flujo de Solicitudes</span><span>Recuperación de Servicios</span>
+      <span>Coppel</span><span>Folios</span><span>Comunicación Asertiva</span><span>Proactividad</span>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section class="skills">
-        <h2 id="skills-title">Skills</h2>
-        <div class="badges" id="skills-badges">
-            <span>Angular</span><span>React</span><span>Java</span><span>TypeScript</span>
-            <span>HTML5 & CSS3</span><span>Node.js</span><span>SQL & NoSQL</span><span>Git & GitHub</span>
-        </div>
-    </section>
+  <section class="experience">
+    <h2>Experiencia</h2>
+    <div>
+      <h3>Analista de Negocios – Coppel</h3>
+      <p>2024 – Actualidad</p>
+      <ul>
+        <li>Recuperación de servicios críticos con documentación y seguimiento.</li>
+        <li>Gestión efectiva de solicitudes de cambio y flujo de folios.</li>
+        <li>Colaboración bajo metodología SCRUM.</li>
+      </ul>
 
-    <!-- EXPERIENCE -->
-    <section class="experience">
-        <h2 id="exp-title">Experience</h2>
-        <div>
-            <h3>Senior Full Stack Developer – Tech Solutions Inc.</h3>
-            <p>Jan 2020 – Present</p>
-            <ul>
-                <li>Developed web apps with Angular & Java Spring Boot.</li>
-                <li>Implemented UI components with React & TypeScript.</li>
-            </ul>
-            <h3>Front End Developer – Web Creatives</h3>
-            <p>Jun 2017 – Dec 2019</p>
-            <ul>
-                <li>Built interfaces with React and Redux.</li>
-                <li>Optimized apps for speed and scalability.</li>
-            </ul>
-        </div>
-    </section>
+      <h3>Ingeniero de servicios – SICA Automatizacion (Sukarne)</h3>
+      <p>2023 – 2024</p>
+      <ul>
+        <li>Seguimiento de equipos de integracion de tecnologias de automatizacion.</li>
+        <li>Aseguramiento de cumplimiento de Normas y seguridad en la industria.</li>
+        <li>Colaboración bajo metodología Agil.</li>
+      </ul>
 
-    <!-- EDUCATION -->
-    <section class="education">
-        <h2 id="edu-title">Education</h2>
-        <p>Bachelor of Science in Computer Science</p>
-        <p>University of Technology, 2013 – 2017</p>
-    </section>
+      <h3>Interno en Ingeniería – Safran Mexicali</h3>
+      <p>2022 – 2023</p>
+      <ul>
+        <li>Elaboración de Scripts de ofimática en Python para automatizar procesos.</li>
+        <li>Elaboración de Dashboards de KPIs.</li>
+        <li>Creación de bases de datos relacionales, para manejo y seguimiento industrial.</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- PROYECTOS MENU -->
-    <section class="menu-proyectos">
-        <h2 id="projects-title">My Projects</h2>
-        <div class="contenedores">
-            <div class="card" onclick="scrollToSection('web')">
-                <img src="assets/img/desarrollos-web.png" alt="Desarrollos Web">
-                <h3>Desarrollos Web</h3>
-            </div>
-            <div class="card" onclick="scrollToSection('dotnet')">
-                <img src="assets/img/desarrollos-dotnet.png" alt="Desarrollos .NET">
-                <h3>Desarrollos .NET</h3>
-            </div>
-            <div class="card" onclick="scrollToSection('dashboards')">
-                <img src="assets/img/dashboards.png" alt="Dashboards">
-                <h3>Dashboards</h3>
-            </div>
-        </div>
-    </section>
+  <section class="education">
+    <h2>Educación</h2>
+    <div class="edu-columns">
+      <div class="edu-block">
+        <h3>Estudios</h3>
+        <p><strong>Ingeniería en Mecatrónica</strong></p>
+        <p>Orientada a gestión de procesos y tecnología</p>
+        <p>Instituto Tecnológico de Culiacán</p>
+        <p>Nivel de Inglés: C1</p>
+      </div>
+      <div class="edu-block">
+        <h3>Certificados</h3>
+        <ul>
+          <li>Scrum Master – Fundación Carlos Slim</li>
+          <li>Certificado Profesional de Análisis de Datos – IBM</li>
+          <li>Certificado Profesional de Data Analytics Advanced – Google</li>
+          <li>Certificación en Herramientas de Google para Oficina</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- SECCIÓN DESARROLLOS WEB -->
-    <section id="web">
-        <h2>Desarrollos Web</h2>
-        <div class="gallery">
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/desarrollos-web1.png" alt="Proyecto 1">
-                <div class="desc">E-commerce con Angular</div>
-            </a>
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/desarrollos-web2.png" alt="Proyecto 2">
-                <div class="desc">Landing Page Responsive</div>
-            </a>
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/desarrollos-web3.png" alt="Proyecto 3">
-                <div class="desc">Blog en React</div>
-            </a>
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/desarrollos-web4.png" alt="Proyecto 4">
-                <div class="desc">Web Corporativa</div>
-            </a>
-        </div>
-    </section>
-    
+<section class="galeria">
+  <h2>Lo que sé hacer</h2>
+  <div class="gallery">
 
-    <!-- SECCIÓN DESARROLLOS .NET -->
-    <section id="dotnet">
-        <h2>Desarrollos .NET</h2>
-        <div class="gallery">
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/desarrollos-dotnet1.png" alt="Proyecto .NET 1">
-                <div class="desc">Sistema ERP en .NET Core</div>
-            </a>
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/desarrollos-dotnet2.png" alt="Proyecto .NET 2">
-                <div class="desc">App de Inventarios</div>
-            </a>
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/desarrollos-dotnet3.png" alt="Proyecto .NET 3">
-                <div class="desc">Gestión de Clientes (CRM)</div>
-            </a>
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/desarrollos-dotnet4.png" alt="Proyecto .NET 4">
-                <div class="desc">Sistema Contable</div>
-            </a>
-        </div>
-    </section>
-    
+    <div class="project" data-detail="Implementé tableros Scrum con seguimiento diario, facilitando entregas semanales exitosas en entornos de alta demanda.">
+      <img src="img/A_high-resolution_photograph_depicts_four_professi.png" alt="Tablero Scrum">
+      <div class="desc">Gestión ágil con SCRUM</div>
+    </div>
 
-    <!-- SECCIÓN DASHBOARDS -->
-    <section id="dashboards">
-        <h2>Dashboards</h2>
-        <div class="gallery">
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/dashboards1.png" alt="Dashboard 1">
-                <div class="desc">Ventas Power BI</div>
-            </a>
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/dashboards2.png" alt="Dashboard 2">
-                <div class="desc">Reporte Financiero Looker</div>
-            </a>
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/dashboards3.png" alt="Dashboard 3">
-                <div class="desc">Dashboard Logístico</div>
-            </a>
-            <a href="https://www.google.com" target="_blank" class="project">
-                <img src="assets/img/dashboards4.png" alt="Dashboard 4">
-                <div class="desc">KPIs de Producción</div>
-            </a>
-        </div>
-    </section>
-    
+    <div class="project" data-detail="Logré recuperar servicios críticos documentando causas raíz y optimizando tiempos de respuesta en un 40%.">
+      <img src="img/A_2D_vector_graphic_flowchart_diagram_illustrates_.png" alt="Recuperación de Servicios">
+      <div class="desc">Recuperación de servicios críticos</div>
+    </div>
 
-    <!-- CONTACTO AL FINAL -->
-    <section class="contact">
-        <h2 id="contact-title">Contact</h2>
-        <p>Email: kevin.gomez.mec@gmail.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/kevin-gomez-uriarte-3a50802a2" target="_blank">Perfil</a></p>
-        <p>GitHub: <a href="https://github.com/KevinMec" target="_blank">Repositorio</a></p>
-    </section>
+    <div class="project" data-detail="Automatización y trazabilidad de flujos de solicitudes y folios en Coppel con enfoque en eficiencia operativa.">
+      <img src="img/A_screenshot_of_a_digital_change_request_tracking_.png" alt="Flujo de Folios">
+      <div class="desc">Flujos de solicitudes y control de folios</div>
+    </div>
+
+  </div>
+</section>
 
 
-    <!-- FLECHA PARA SUBIR -->
-    <div id="goTop" onclick="scrollToTop()">🔝</div>
+  <section class="contact">
+    <h2>Contacto</h2>
+    <p>Email: kevin.gomez.mec@gmail.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/kevin-gomez-uriarte-3a50802a2" target="_blank">Perfil Profesional</a></p>
+    <p>GitHub: <a href="https://github.com/KevinMec" target="_blank">Repositorio</a></p>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Kevin Gómez Uriarte</p>
-    </footer>
+  <div id="goTop" onclick="scrollToTop()">🔝</div>
 
-    <script src="script.js"></script>
+  <footer>
+    <p>© 2025 Kevin Gómez Uriarte</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
